@@ -15,10 +15,11 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 
-public class Assesment_Oct27 {
-
-	public static void main(String args[]) throws InterruptedException, MalformedURLException {
+public class Assesment_Oct27 extends BaseClass {
+ @Test
+	public  void Assesment() throws InterruptedException, MalformedURLException {
 
 	/*ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-notifications"); // Disable pop-ups and notifications
@@ -29,7 +30,7 @@ public class Assesment_Oct27 {
 		// Set Remote WebDriver and Desired Capabilities for GRID Execution
     	// UI Console - http://20.40.48.160:4444/ui/#/sessions - click on Video - secret is the password
     	
-    	// Set ChromeOptions
+    	/*// Set ChromeOptions
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-notifications");
          
@@ -38,15 +39,11 @@ public class Assesment_Oct27 {
     			dc.setPlatform(Platform.LINUX);
     			dc.setCapability(ChromeOptions.CAPABILITY, options);
     		  //dc.merge(options);
-    			RemoteWebDriver driver = new RemoteWebDriver(new URL("http://20.40.48.160:4444/wd/hub"), dc);
+    			RemoteWebDriver driver = new RemoteWebDriver(new URL("http://20.40.48.160:4444/wd/hub"), dc);*/
 
            
 
-		// Step 1: Login to Sales-force Application
-		driver.manage().deleteAllCookies();
-		driver.get("https://www.nba.com/stats");
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		driver.manage().window().maximize();
+		
 
 		driver.findElement(By.xpath("//button[@id='onetrust-accept-btn-handler']")).click();
 
